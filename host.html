@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HealthFirst Clinic - Your Health, Our Priority</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Adding some basic styling -->
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #2c5282;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #4299e1;
+      padding: 1rem 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      background-color: #ebf8ff;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .services {
+      background-color: #f7fafc;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background-color: white;
+      border-radius: 5px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .cta {
+      background-color: #2c5282;
+      color: white;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #4299e1;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+
+    footer {
+      background-color: #2d3748;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+  </style>
+
+  <script id="widget-injector" src="http://localhost:3000/widget.js" async defer></script>
+  <!-- <script id="widget-injector" src="https://joinemrg.com/widget.js" async defer></script> -->
+  <script>
+    // Initialize widget with GA tracking after it loads
+    window.addEventListener('load', function() {
+      if (window.emrgWidget) {
+        window.emrgWidget.init({
+          clinicId: 25,  // Your clinic ID
+          gaMeasurementId: 'G-EGGKKEZLKH'  // Your Google Analytics ID
+        });
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>HealthFirst Clinic</h1>
+    <p>Your Health, Our Priority</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#doctors">Our Doctors</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="home">
+    <h2>Welcome to HealthFirst Clinic</h2>
+    <p>Providing comprehensive healthcare services for you and your family since 2005.</p>
+    <a>
+      <div onclick="launchEmrgWidget(25)" class="btn">Book an Appointment</div>
+    </a>
+  </section>
+
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Primary Care</h3>
+        <p>Comprehensive healthcare for patients of all ages, including preventative care and chronic disease
+          management.</p>
+      </div>
+      <div class="service-card">
+        <h3>Pediatrics</h3>
+        <p>Specialized healthcare for infants, children, and adolescents, focusing on growth, development, and
+          well-being.</p>
+      </div>
+      <div class="service-card">
+        <h3>Women's Health</h3>
+        <p>Comprehensive gynecological care and services tailored to women's unique health needs throughout
+          their lives.</p>
+      </div>
+      <div class="service-card">
+        <h3>Mental Health</h3>
+        <p>Support for emotional well-being through counseling, therapy, and medication management when needed.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="doctors">
+    <h2>Meet Our Doctors</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Dr. Sarah Johnson</h3>
+        <p>Family Medicine</p>
+        <p>Board Certified with over 15 years of experience.</p>
+      </div>
+      <div class="service-card">
+        <h3>Dr. Michael Chen</h3>
+        <p>Pediatrics</p>
+        <p>Specializing in childhood development and preventative care.</p>
+      </div>
+      <div class="service-card">
+        <h3>Dr. Lisa Rodriguez</h3>
+        <p>Women's Health</p>
+        <p>Dedicated to providing compassionate care for women of all ages.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="appointment">
+    <h2>Schedule Your Appointment Today</h2>
+    <p>We're committed to providing the best healthcare experience possible.</p>
+    <a href="#" class="btn">Book Online</a>
+    <p>Or call us at: (555) 123-4567</p>
+  </section>
+
+  <section id="about">
+    <h2>About HealthFirst Clinic</h2>
+    <p>HealthFirst Clinic was founded with a simple mission: to provide accessible, high-quality healthcare to our
+      community. With state-of-the-art facilities and a compassionate team of healthcare professionals, we strive
+      to make every patient feel valued and cared for.</p>
+    <p>Our approach combines medical expertise with a deep understanding of our patients' needs, ensuring that each
+      person receives individualized care and attention.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Address:</strong> 123 Medical Drive, Healthville, CA 90210</p>
+    <p><strong>Phone:</strong> (555) 123-4567</p>
+    <p><strong>Email:</strong> info@healthfirstclinic.com</p>
+    <p><strong>Hours:</strong><br>
+      Monday - Friday: 8:00 AM - 6:00 PM<br>
+      Saturday: 9:00 AM - 1:00 PM<br>
+      Sunday: Closed</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 HealthFirst Clinic. All rights reserved.</p>
+    <p>Privacy Policy | Terms of Service</p>
+  </footer>
+</body>
+
+</html>
